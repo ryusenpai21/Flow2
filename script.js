@@ -27,6 +27,30 @@ onresize = () => {
     ctx.canvas.style.height = D + "px";
 };
 
+document.addEventListener("DOMContentLoaded", function () {
+    // Membuat elemen h1 untuk menampilkan nama
+    const nameElement = document.createElement("h1");
+    nameElement.textContent = "Franzeska";
+   
+    // Styling elemen
+    nameElement.style.fontSize = "2rem";
+    nameElement.style.color = "blue";
+    nameElement.style.textAlign = "center";
+    nameElement.style.marginTop = "20px";
+    nameElement.style.opacity = "0";
+    nameElement.style.transition = "opacity 2s ease-in-out";
+
+    // Menambahkan elemen ke dalam body
+    document.body.appendChild(nameElement);
+
+    // Efek fade-in setelah 500ms
+    setTimeout(() => {
+        nameElement.style.opacity = "1";
+    }, 500);
+});
+
+// Kode sebelumnya tetap ada di sini, melanjutkan logika animasi dan efek lain...
+
 const getRandomInt = (min, max, low) => {
     if (low) return Math.floor(Math.random() * Math.random() * (max - min)) + min;
     else return Math.floor(Math.random() * (max - min)) + min;
